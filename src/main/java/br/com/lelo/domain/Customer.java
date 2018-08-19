@@ -26,10 +26,6 @@ public abstract class Customer {
 
     private Date creationDate;
 
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
-    @JoinColumn(name = "id_user")
-    private UserApp user;
-
     public Customer() {
     }
 
@@ -81,11 +77,4 @@ public abstract class Customer {
         this.creationDate = creationDate;
     }
 
-    public UserApp getUser() {
-        return user;
-    }
-
-    public void setUser(UserApp user) {
-        this.user = user;
-    }
 }
