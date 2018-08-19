@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping("/api/customers/startup/")
 public class CustomersStartupController extends CustomerController {
 
@@ -17,19 +16,21 @@ public class CustomersStartupController extends CustomerController {
     protected CustomerStartupService service;
 
     @PostMapping
-    public ResponseEntity<Void> neww(
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<CustomerStartup> neww(
             @Valid @RequestBody CustomerStartup customer) {
 
-        CustomerStartup saved = service.save(customer);
-        return this.location(saved.getId());
+        return ResponseEntity.ok(service.save(customer));
     }
 
     @GetMapping("{id}")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<CustomerStartup> findById(@PathVariable Long id) {
         return ResponseEntity.ok(service.findById(id));
     }
 
     @GetMapping
+    @CrossOrigin(origins = "*")
     public ResponseEntity<Iterable<CustomerStartup>> findAll() {
         return ResponseEntity.ok(service.findAll());
     }

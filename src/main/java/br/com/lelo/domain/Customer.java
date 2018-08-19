@@ -1,6 +1,5 @@
 package br.com.lelo.domain;
 
-import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
@@ -21,10 +20,8 @@ public abstract class Customer {
     private String description;
 
     @NotEmpty
-    @Email
     private String email;
 
-    @NotEmpty
     private String phone;
 
     private Date creationDate;

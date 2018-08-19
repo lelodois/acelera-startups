@@ -3,8 +3,6 @@ package br.com.lelo.controller;
 import br.com.lelo.domain.Customer;
 import org.springframework.http.ResponseEntity;
 
-import static org.springframework.web.servlet.support.ServletUriComponentsBuilder.fromCurrentRequest;
-
 public abstract class CustomerController {
 
     protected ResponseEntity<Customer> ok(Customer customer) {
@@ -21,13 +19,4 @@ public abstract class CustomerController {
         return ResponseEntity.ok(customers);
     }
 
-    protected ResponseEntity<Void> location(Long id) {
-
-        return ResponseEntity.created(
-                fromCurrentRequest()
-                        .path("/{id}")
-                        .buildAndExpand(id)
-                        .toUri())
-                .build();
-    }
 }
