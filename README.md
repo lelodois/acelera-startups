@@ -14,7 +14,7 @@ Versão backend que disponibiliza uma Api para cadastro de startup e empresas
 
 * Faça o clone do projeto
 * mvn install
-* java -jar target/acelera-startups-1.0.0.jar
+* nohup java -jar target/acelera-startups-1.0.0.jar &
   
 ### Tecnologias
 
