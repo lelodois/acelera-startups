@@ -27,6 +27,9 @@ Versão backend que disponibiliza uma Api para cadastro de startup e empresas
 ### Documentação da Api
 ![App](https://github.com/lelodois/acelera-startups-back/blob/master/swagger.png)
 
+### Base de dados
+![App](https://github.com/lelodois/acelera-startups-back/blob/master/base.png)
+
 * ** Frontend ** - *Java API* - [Source code](https://github.com/lelodois/acelera-startups-front)
 
 ### Autor
